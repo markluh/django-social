@@ -25,10 +25,8 @@ Follow these steps to run the project locally.
 ```bash
 git clone https://github.com/markluh/django-social.git
 cd django-social/backend
-
-
+```
 ### 2. Create & Activate Virtual Environment
-
 ```bash
 python -m venv .venv
 # On Linux/Mac

@@ -4,11 +4,6 @@
 ![Django](https://img.shields.io/badge/django-4.2-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-purple.svg)
 
-A modern **social networking platform** built with Django & Django REST Framework.
-
-
-# Django Social
-
 Django Social is a social networking platform built with **Django** where users can:
 
 - Create an account (authentication & registration)

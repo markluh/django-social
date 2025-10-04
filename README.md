@@ -1,3 +1,10 @@
+# Django Social
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+![Django](https://img.shields.io/badge/django-4.2-green.svg)
+![License](https://img.shields.io/badge/license-MIT-purple.svg)
+
+A modern **social networking platform** built with Django & Django REST Framework.
 
 
 # Django Social

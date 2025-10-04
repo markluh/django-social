@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+<h2>Post by {{ post.author.username }}</h2>
+<p>{{ post.content|linebreaks }}</p>
+{% if post.image %}
+<img src="{{ post.image.url }}" style="max-width: 400px" />
+{% endif %}
+
+<h3>Comments</h3>
+{% for c in post.comments.all %}
+<div
+  style="margin-left:{% if c.parent %}20px{% endif %};border-bottom:1px solid #eee;padding:6px;"
+>
+  <p><strong>{{ c.author.username }}</strong>: {{ c.content }}</p>
+  <p><a href="#" onclick="reply({{ c.id }});return false;">Reply</a></p>
+  {% for r in c.replies.all %}
+  <div style="margin-left: 20px">
+    <p><strong>{{ r.author.username }}</strong>: {{ r.content }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+
+<h4>Add comment</h4>
+<form method="post" action="{% url 'add_comment' post.id %}">
+  {% csrf_token %}
+  <textarea name="content" required></textarea><br />
+  <input type="hidden" name="parent" id="parent_id" />
+  <button type="submit">Comment</button>
+</form>
+
+<script>
+  function reply(id) {
+    document.getElementById("parent_id").value = id;
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+<h1>Home feed</h1>
+<a href="{% url 'create_post' %}">Create post</a> |
+<a href="{% url 'create_community' %}">Create community</a>
+<hr />
+<form method="post" action="{% url 'status_create' %}">
+  {% csrf_token %}
+  <input
+    type="text"
+    name="text"
+    placeholder="What's on your mind?"
+    maxlength="280"
+    required
+  />
+  <button type="submit">Post status</button>
+</form>
+
+{% for post in posts %}
+<div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0">
+  <p>
+    <strong>{{ post.author.username }}</strong> {% if post.community %} in
+    <em>{{ post.community.name }}</em>{% endif %}
+  </p>
+  <p>{{ post.content|linebreaks }}</p>
+  {% if post.image %}
+  <img src="{{ post.image.url }}" alt="post image" style="max-width: 300px" />
+  {% endif %}
+  <p><a href="{% url 'post_detail' post.id %}">View / Comment</a></p>
+</div>
+{% empty %}
+<p>No posts yet.</p>
+{% endfor %} {% endblock %}

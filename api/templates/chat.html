@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<h2>Chat with {{ other.username }}</h2>
+<div
+  id="msgbox"
+  style="
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  "
+>
+  {% for m in messages %}
+  <div><strong>{{ m.sender.username }}</strong>: {{ m.text }}</div>
+  {% endfor %}
+</div>
+
+<form method="post" action="{% url 'send_message' other.username %}">
+  {% csrf_token %}
+  <input name="text" placeholder="Type a message" required autocomplete="off" />
+  <button type="submit">Send</button>
+</form>
+{% endblock %}

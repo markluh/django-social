@@ -22,7 +22,7 @@ This project is a foundation for a modern social media app.
 
 Follow these steps to run the project locally.
 
-### 1. Clone the Repository
+###  1. Clone the Repository
 ```bash
 git clone https://github.com/markluh/django-social.git
 cd django-social/backend

@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     "rest_framework",
 
     "channels",
-    "api",
+    
 ]
 
 ASGI_APPLICATION = "backend.asgi.application"

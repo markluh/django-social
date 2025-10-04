@@ -23,26 +23,26 @@ Follow these steps to run the project locally.
 ```bash
 git clone https://github.com/markluh/django-social.git
 cd django-social/backend
-##2. Create & Activate Virtual Environment
+###2. Create & Activate Virtual Environment
 python -m venv .venv
 source .venv/bin/activate   # On Linux/Mac
 .venv\Scripts\activate  #on windows
-##3. Install Dependencies
+###3. Install Dependencies
 pip install -r requirements.txt
 
-##4. Set Up Database
+###4. Set Up Database
 
 Apply migrations to create the required database schema:
 
 python manage.py migrate
 
-##5. Create a Superuser (Admin)
+###5. Create a Superuser (Admin)
 python manage.py createsuperuser
 
 
 Follow the prompts to set up your admin account.
 
-##6. Run the Development Server
+###6. Run the Development Server
 python manage.py runserver
 
 

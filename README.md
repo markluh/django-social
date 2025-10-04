@@ -1,5 +1,4 @@
-🔥 Nice — let’s polish your README so it looks like a professional open-source project.
-Here’s a **refined version** with badges and placeholders for screenshots:
+
 
 ````markdown
 # Django Social  

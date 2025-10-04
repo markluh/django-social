@@ -1,3 +1,6 @@
+
+
+````markdown
 # Django Social
 
 Django Social is a social networking platform built with **Django** where users can:
@@ -23,33 +26,54 @@ Follow these steps to run the project locally.
 ```bash
 git clone https://github.com/markluh/django-social.git
 cd django-social/backend
-2. Create & Activate Virtual Environment
-python -m venv .venv
-source .venv/bin/activate   # On Linux/Mac
-.venv\Scripts\activate  #on windows
-3. Install Dependencies
-pip install -r requirements.txt
+````
 
-4. Set Up Database
+### 2. Create & Activate Virtual Environment
+
+```bash
+python -m venv .venv
+# On Linux/Mac
+source .venv/bin/activate
+# On Windows
+.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Set Up Database
 
 Apply migrations to create the required database schema:
 
+```bash
 python manage.py migrate
+```
 
-5. Create a Superuser (Admin)
+### 5. Create a Superuser (Admin)
+
+```bash
 python manage.py createsuperuser
-
+```
 
 Follow the prompts to set up your admin account.
 
-6. Run the Development Server
-python manage.py runserver
+### 6. Run the Development Server
 
+```bash
+python manage.py runserver
+```
 
 Now open the app in your browser:
-👉 http://127.0.0.1:8000
+👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-📦 Project Structure
+---
+
+## 📦 Project Structure
+
+```
 django-social/
 │
 ├── backend/              # Django project folder
@@ -63,11 +87,15 @@ django-social/
 │
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
+```
 
-⚙️ Tech Stack
+---
 
-Backend: Django, Django REST Framework
+## ⚙️ Tech Stack
 
-Database: SQLite (default) / MySQL / PostgreSQL
+* **Backend**: Django, Django REST Framework
+* **Database**: SQLite (default) / MySQL / PostgreSQL
+* **Realtime**: Django Channels (for chat & live)
 
-Realtime: Django Channels (for chat & live)
+```
+

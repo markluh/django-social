@@ -1,5 +1,5 @@
 
-````markdown
+
 # Django Social
 
 Django Social is a social networking platform built with **Django** where users can:
@@ -15,7 +15,7 @@ Django Social is a social networking platform built with **Django** where users 
 
 This project is a foundation for a modern social media app.
 
----
+
 
 ## 🚀 Getting Started
 
@@ -25,7 +25,7 @@ Follow these steps to run the project locally.
 ```bash
 git clone https://github.com/markluh/django-social.git
 cd django-social/backend
-````
+
 
 ### 2. Create & Activate Virtual Environment
 
